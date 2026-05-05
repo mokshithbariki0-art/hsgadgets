@@ -1,5 +1,5 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-import { Splash } from "@/components/site/Splash";
+
 
 import appCss from "../styles.css?url";
 
@@ -87,10 +87,5 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
-  return (
-    <>
-      <Splash />
-      <Outlet />
-    </>
-  );
+  return <Outlet />;
 }
