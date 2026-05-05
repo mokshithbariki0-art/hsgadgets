@@ -29,14 +29,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "HS Gadgets" },
+      { name: "description", content: "HS Gadgets Showcase is a visually striking website for a gadget reseller, featuring unique design elements and a blue/white color scheme." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "HS Gadgets" },
+      { property: "og:description", content: "HS Gadgets Showcase is a visually striking website for a gadget reseller, featuring unique design elements and a blue/white color scheme." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "HS Gadgets" },
+      { name: "twitter:description", content: "HS Gadgets Showcase is a visually striking website for a gadget reseller, featuring unique design elements and a blue/white color scheme." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/92f46b99-857f-45c4-a6b1-f1222d75a489/id-preview-0d6c021c--2773621b-f2a5-4e80-bef1-521bbc64b6f6.lovable.app-1777977282878.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/92f46b99-857f-45c4-a6b1-f1222d75a489/id-preview-0d6c021c--2773621b-f2a5-4e80-bef1-521bbc64b6f6.lovable.app-1777977282878.png" },
     ],
     links: [
       {
