@@ -1,23 +1,41 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Splash } from "@/components/site/Splash";
 
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background px-4">
+      <div className="aurora absolute inset-0 opacity-60" />
+      <div className="absolute inset-0 grid-bg opacity-40" />
+      <div className="absolute -top-40 left-1/2 h-[40rem] w-[40rem] -translate-x-1/2 rounded-full bg-[var(--azure)]/30 blur-3xl" />
+
+      <div className="relative z-10 max-w-xl text-center">
+        <div className="font-display text-[clamp(7rem,22vw,16rem)] leading-none tracking-tight text-gradient italic">
+          404
+        </div>
+        <h2 className="-mt-4 font-display text-3xl text-[var(--ink)] sm:text-4xl">
+          This page wandered off.
+        </h2>
+        <p className="mt-4 text-sm text-muted-foreground sm:text-base">
+          The link you followed may be broken, or the page may have been moved. Let&rsquo;s get you back to the good stuff.
         </p>
-        <div className="mt-6">
+        <div className="mt-8 flex items-center justify-center gap-3">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-[var(--ink)] px-6 py-3 text-sm font-medium text-white glow-ring"
           >
-            Go home
+            <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-[var(--electric)] via-[var(--azure)] to-[var(--electric)] transition-transform duration-700 group-hover:translate-x-0" />
+            <span className="relative">Back to home</span>
           </Link>
+          <a
+            href="https://wa.me/c/919945540050"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-[var(--ink)]/15 bg-white/60 px-6 py-3 text-sm font-medium text-[var(--ink)] backdrop-blur transition-colors hover:bg-white"
+          >
+            Browse catalogue
+          </a>
         </div>
       </div>
     </div>
@@ -69,5 +87,10 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
-  return <Outlet />;
+  return (
+    <>
+      <Splash />
+      <Outlet />
+    </>
+  );
 }
